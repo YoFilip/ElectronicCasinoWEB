@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap%27');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+/*Styl dla wszystkiego*/
+html {
+  min-width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/*INDEX.HTML STYLE GŁÓWNE */
+
+.title {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 60%;
+  font-size: 4.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.main {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: yellow;
+}
+
+.main footer {
+  width: 100%;
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+
+
+/*STRONA POBIERANIE*/
+.pobieranie {
+  gap: 80px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+  overflow-x: hidden;
+}
+
+
+.pobieranie .button {  /* BUTTON STRONA POBIERANIE*/
+  z-index: 999;
+  background-color: black;
+  color: rgb(255, 0, 0);
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 5px solid rgb(255, 0, 0);
+}
+
+.pobieranie .button:hover {
+  background-color: rgb(255, 0, 0);
+  color: black;
+  cursor: pointer;
+}
+
+
+/*======ANIMOWANY NAPIS STRONA POBIERANIE=======*/
+
+.pobieranie h2 {
+  position: relative;
+  font-size: 12vw;
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 0.2vw rgb(73, 71, 71);
+  text-transform: uppercase;
+  top:20%;
+}
+
+.pobieranie h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: rgb(255, 0, 0);
+  -webkit-text-stroke: 0 rgb(73, 71, 71);
+  border-right: 2px solid rgba(211, 211, 54, 0);
+  overflow: hidden;
+  animation: animate3 15s linear infinite;
+}
+
+@keyframes animate3 {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+
+
+/*====SCRYPT NA FALE STRONA POBIERANIE======*/
+
+.pobieranie header,
+.pobieranie footer {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pobieranie header .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(/src/img/wave.png);
+  background-size: 1000px 100px;
+}
+
+.pobieranie header .wave.wave1 {
+  animation: animate 30s linear infinite;
+  opacity: 1;
+  animation-delay: 0s;
+}
+
+.pobieranie header .wave.wave2 {
+  animation: animate2 15s linear infinite;
+  opacity: 0.5;
+  animation-delay: -5s;
+}
+
+.pobieranie header .wave.wave3 {
+  animation: animate 30s linear infinite;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+
+.pobieranie header .wave.wave4 {
+  animation: animate2 15s linear infinite;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+
+
+/*=======SCRYPT NA FALE DRUGĄ STRONA POBIERANIE==========*/
+
+
+
+.pobieranie footer .unwave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(/src/img/wavee.png);
+  background-size: 1000px 100px;
+}
+
+.pobieranie footer .unwave.wave5 {
+  animation: animate 30s linear infinite;
+  opacity: 1;
+  animation-delay: 0s;
+}
+
+.pobieranie footer .unwave.wave6 {
+  animation: animate2 15s linear infinite;
+  opacity: 0.5;
+  animation-delay: -5s;
+  top: 10px;
+
+}
+
+.pobieranie footer .unwave.wave7 {
+  animation: animate 30s linear infinite;
+  opacity: 0.2;
+  animation-delay: -2s;
+}
+
+.pobieranie footer .unwave.wave8 {
+  animation: animate2 15s linear infinite;
+  opacity: 0.7;
+  animation-delay: -5s;
+  top: 20px;
+}
+
+
+
+/*=====Animacja Fali 1 and Fali 2  STRONA POBIERANIE====*/
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+
+
+   /*===Główna strona===*/
+/*===Menu rozwijane/główne==*/
+
+
+.glowna {
+  background-image: url(/src/img/cards.jpg);
+ 
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.mniejszynapis
+{
+  font-size: 15px;
+}
+
+nav {
+  height: 80px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 9999999999;
+}
+
+nav .logo {
+  font-size: 33px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  padding-left: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: rgb(255, 255, 255);
+  background: rgb(240, 0, 0);
+}
+
+.menu-btn i {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .logo {
+    display: none;
+  }
+
+  .title {
+    padding-top: 60px;
+    text-align: center;
+    position: static;
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
+  }
+
+  nav {
+    justify-content: flex-end;
+  }
+
+  nav label {
+    padding-right: 20px;
+  }
+
+  .menu-btn i {
+    display: block;
+  }
+
+  #click:checked~.menu-btn i::before {
+    content: "\f00d";
+  }
+
+  nav ul {
+    z-index: 3;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: rgb(17, 17, 17);
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  #click:checked~ul {
+    left: 0
+  }
+
+  nav ul li {
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: rgb(255, 0, 0);
+    background: none;
+  }
+}
+ /* ====== Akapity Index.html ====*/
+.biale2{
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 600px;
+
+  justify-content: center;
+ display: flex;
+  align-items: center;
+}
+.biale3{
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 600px;
+  margin-top: 100vh;
+  justify-content: center;
+ display: flex;
+  align-items: center;
+}
+.biale2 > * {
+  background-color: white;
+  box-shadow: -1px 4px 50px 4px rgb(0, 0, 0);
+   border-radius: 50px;
+   text-align: center;
+   color: rgb(0, 0, 0);
+   width: 1800px;
+   height: 500px;
+   margin: 10px;
+}
+.biale3 > * {
+  background-color: white;
+  box-shadow: -1px 4px 50px 4px rgb(0, 0, 0);
+   border-radius: 50px;
+   text-align: center;
+   color: rgb(0, 0, 0);
+   width: 1800px;
+   height: 500px;
+   margin: 10px;
+}
+
+/* Animowane zdjęcie*/
+.box{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #000;
+  border-radius: 50px;
+  box-shadow: -1px 4px 50px 4px rgb(255, 0, 0);
+}
+
+
+.box-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  font-family: consolas;
+  text-align: center;
+  
+}
+
+.box img{
+  position:  absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition: 1s;
+}
+
+.box:hover img{
+  clip-path: polygon(0 100%, 100% 100%, 0 100%, 100% 100%);
+}
+
+ 
+
+  /* ====== Autorzy INDEX.HMTL ====*/
+  .biale      /* ====== Autorzy ====*/
+  {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 600px;
+  margin-top: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  }
+  
+  .biale > * {
+     box-shadow: -1px 1px 27px 2px rgb(255, 0, 0);
+      border-radius: 50px;
+      padding: 25px;
+      text-align: center;
+      color: rgb(0, 0, 0);
+      width: 350px;
+      margin: 10px;
+  }
+
+
+ img 
+{
+  display: block;
+  max-width: 100%;
+    margin-bottom: 15px;
+    border: 10px solid black;
+}
+
+.h2 
+{
+  margin-bottom: 1em;
+}
+ul
+{
+list-style-position:  inside;
+}
+
+/*====Stopka====*/
+.footer{
+  background-color: black;
+  
+  
+}
+footer p{
+ color: white;
+ text-align: center;
+ height: 50px;
+}
+.footer2{
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+/*===Strona Kontaktowa===*/
+.kontaktzdjencie{
+  background-image: url(/src/img/cards2.jpg);
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+.contact-section{
+
+  background-size: cover;
+  padding: 40px 0;
+}
+.contact-section h1{
+  text-align: center;
+  color: #ddd;
+}
+.border{
+  width: 100px;
+  height: 10px;
+  background: #ff0000;
+  margin: 40px auto;
+}
+
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+.contact-form-text:focus{
+  box-shadow: 0 0 10px 4px #ff0000;
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 120px;
+}
+.contact-form-button{
+  float: right;
+  border: 0;
+  background: #ff0000;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact-form-button:hover{
+  background: #000000;
+}
+
+
+/*===Strona Info===*/
+
+.infobody{
+  background-image: url(/src/img/cards.jpg);
+  background-color: black;
+}
+.h1{
+  font-size: 40px;
+}
+.biale3 > * {
+  background-color: white;
+  box-shadow: -1px 4px 50px 4px rgb(0, 0, 0);
+   border-radius: 50px;
+   text-align: center;
+   color: rgb(0, 0, 0);
+   width: 1800px;
+   height: 500px;
+   margin: 10px;
+  
+}
+.biale3  
+{
+background-color: rgb(255, 255, 255);
+width: 100%;
+height: 600px;
+margin-top: 100vh;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+
+}
+/*===OKNO INFORMACJI NEWSÓW ===*/
+
+.post{
+  width: 100%;
+  max-width: 98rem;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 10rem red;
+  display: flex;
+
+  border-radius: .8rem;
+  position: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post_img{
+min-width: 35rem;
+max-width: 35rem;
+height: 30rem;
+transform: translateX(-8rem);
+/*position: relative;*/
+-webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+.post_img:hover{
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+  }
+.post_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: .8rem;
+}
+.post_img::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: .8rem;
+}
+.post_info_data span{
+  display: block;
+  color: rgba(0,.0,0,.5);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: .5rem 0;
+}
+.post_napis{
+font-size: 2.5rem;
+margin: 1.5rem 0 2rem;
+text-transform: uppercase;
+color: #ff0000;
+}
+.post_text{
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+  color: rgba(0,0,0.7)
+}
+
+@media screen and (max-width: 1068px){
+  .post{
+      max-width: 70rem;
+  }
+ 
+} 
+
+@media screen and (max-width: 768px){
+  .post{
+      padding: 2.5rem;
+      flex-direction: column;
+  }
+  .post_img{
+      min-width: 100%;
+      max-width: 100%;
+      transform: translate(0, -8rem)
+  }
+} 
+
+.infodiv  
+{
+
+width: 100%;
+
+margin-top: 10vh;
+background-size: fill;
+align-items: center;
+} 
+
+
+
+/*===Źródła===*/
+.pseudoklasa1:hover{
+  color: rgb(240, 0, 0);
+}
+
+
+

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <title>Electronic Casino</title><!-- Nazwa strony -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Ustawienie rozmiaru okna przeglądarki -->
+    <meta charset="UTF-8" />
+    <!--Ustawienie języka polskiego-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Podpięcie CSS-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!--Podpięcie Animacji CSS-->
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="/scripts/toast.js"></script>
+    <!--Podpięcie Toasta-->
+    </head>
+
+
+    
+<body class="pobieranie">
+    <h2 data-text="E.Casino">E.Casino</h2>
+    <!--Nagłówek 1-->
+
+     <button type="button" id="button" class="button" onclick="window.open ('https://files.fm/f/5yp7tqzgf', 'download');" >Pobierz</button>
+
+    <!--Scrypt Fale-->
+   <header>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </header>
+
+    <footer>
+        <div class="unwave wave5"></div>
+        <div class="unwave wave6"></div>
+        <div class="unwave wave7"></div>
+        <div class="unwave wave8"></div>
+    </footer>
+
+
+    
+
+</body>
+
+    <!--Alert Button-->
+    <script>
+        document.getElementById("button").addEventListener("click", function() {
+           toast();
+        });
+    </script>
+
+
+</html>
